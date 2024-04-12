@@ -1,6 +1,6 @@
 <template>
 
-  <v-card>
+  <v-card height="100%">
    <v-container>
     <v-col>
 
@@ -13,14 +13,48 @@
 
       <v-row>
         <v-row lg="8" md="7" sm="6">
-          <v-col>
-            <v-card-subtitle>Item Rating: {{product.data.rating}}/5</v-card-subtitle>
-          </v-col>
-          <v-col>
-            <v-card-subtitle>Item Price: ${{product.data.price}}</v-card-subtitle>
-          </v-col>
-          <v-col>
-            <v-card-subtitle>Item Stock: {{product.data.stock}}</v-card-subtitle>
+          <v-col justify="space-between">
+            <v-card-subtitle>
+            <v-icon
+
+              class="me-1 pb-1"
+
+              color="yellow"
+
+              icon="mdi-star"
+
+              size="18"
+
+             ></v-icon>
+            {{product.data.rating}}/5    
+            <v-icon
+
+              class="me-1 pb-1"
+
+              color="green"
+
+              icon="mdi-cash"
+
+              size="18"
+
+             ></v-icon>
+            
+            {{product.data.price}}      
+            <v-icon
+
+              class="me-1 pb-1"
+
+              color="blue"
+
+              icon="mdi-cube"
+
+              size="18"
+
+             ></v-icon>
+
+            {{product.data.stock}}
+            </v-card-subtitle>
+            <v-card-subtitle>  </v-card-subtitle>
           </v-col>
         </v-row>
       </v-row>
